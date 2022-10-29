@@ -196,6 +196,7 @@ function reset() {
   $("table").css("display", "none");
   $("td").removeAttr("ai");
   $("td").removeAttr("human");
+  $('.players2').css({'fontSize':'30px'});
   statBtn();
 }
 
@@ -409,6 +410,11 @@ function move2(element, Player1, color) {
   }
 } */
 function twoPlayers() {
+
+  $('.home').click(() => {
+    screens[0].classList.remove('up');
+    screens[1].classList.remove('up');
+  });
 
   var buttonStart = document.querySelector(".button-start")
   var ticTacToe = document.querySelector(".tic-tac-toe");
