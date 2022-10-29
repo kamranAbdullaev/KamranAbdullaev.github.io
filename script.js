@@ -408,23 +408,17 @@ function move2(element, Player1, color) {
     }
   }
 } */
-twoPlayers();
 function twoPlayers() {
 
-  let buttonStart = document.querySelector(".button-start");
-  let ticTacToe = document.querySelector(".tic-tac-toe");
-  let blockPlayer = document.querySelector(".block-player");
-  let blockNowPlayer = document.querySelector(".block-player div");
-  let gameBlock = document.querySelectorAll(".block");
-  let mass = ["X", "0"];
-  let blockWinner = document.querySelector(".winner");
+  var buttonStart = document.querySelector(".button-start")
+  var ticTacToe = document.querySelector(".tic-tac-toe");
+  var blockPlayer = document.querySelector(".block-player");
+  var blockNowPlayer = document.querySelector(".block-player div");
+  var gameBlock = document.querySelectorAll(".block");
+  var mass = ["X", "0"];
+  var blockWinner = document.querySelector(".winner");
 
   buttonStart.onclick = playGame;
-
-  $('.home').click(function (){
-    screens[0].classList.remove('up');
-    screens[1].classList.remove('up');
-  });
 
   function transformGame() {
     buttonStart.classList.toggle("hidden-button");
@@ -442,7 +436,7 @@ function twoPlayers() {
       for (i = 0; i < gameBlock.length; i++) {
         gameBlock[i].innerHTML = "";
       }
-    }, 1000);
+    }, 1000)
   }
 
   function rand(min, max) {
@@ -450,7 +444,7 @@ function twoPlayers() {
   }
 
   function randomInner() {
-    blockNowPlayer.innerHTML = mass[rand(0, mass.length - 1)];
+    blockNowPlayer.innerHTML = mass[rand(0, mass.length - 1)]
   }
 
   function nextPlayer() {
@@ -463,7 +457,7 @@ function twoPlayers() {
   }
 
   function indexOfMass(a, m) {
-    let result;
+    var result;
     for (i = 0; i < m.length; i++) {
       if (a.indexOf(m[i]) === -1) result = -1;
     }
@@ -472,23 +466,23 @@ function twoPlayers() {
   }
 
   function checkWin() {
-    let massWin = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
+    var massWin = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
     [0, 3, 6], [1, 4, 7], [2, 5, 8],
     [0, 4, 8], [2, 4, 6]];
-    let x = [];
-    let y = [];
+    var x = [];
+    var y = [];
     for (i = 0; i < gameBlock.length; i++) {
-      if (gameBlock[i].innerHTML === `<span class="player1">X</span>`) x.push(i);
-      else if (gameBlock[i].innerHTML === `<span class="player2">O</span>`) y.push(i);
+      if (gameBlock[i].innerHTML === "X") x.push(i);
+      else if (gameBlock[i].innerHTML === "0") y.push(i);
     }
     for (z = 0; z < massWin.length; z++) {
       if (indexOfMass(x, massWin[z])) {
-        endGame();
+        endGame()
         return ("Победил крестик");
       }
 
       if (indexOfMass(y, massWin[z])) {
-        endGame();
+        endGame()
         return ("Победил нолик");
       }
     }
@@ -497,7 +491,7 @@ function twoPlayers() {
   function stopPlay() {
     ticTacToe.onclick = function () {
       return false;
-    };
+    }
   }
 
   function playGame() {
@@ -513,14 +507,14 @@ function twoPlayers() {
         count++;
         if (checkWin()) {
           blockWinner.innerHTML = "Игра закончена <br/>" + checkWin();
-        }
+        };
         if (count === 9) {
           if (!checkWin()) {
-            endGame();
+            endGame()
             blockWinner.innerHTML = "Игра закончилась ничьей";
           }
         }
       }
-    };
+    }
   }
 }
