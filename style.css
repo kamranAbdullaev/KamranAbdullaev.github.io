@@ -72,7 +72,7 @@ body {
 .start.players2{
   position: relative;
   top: 120px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .screen {
@@ -359,10 +359,16 @@ table {
 
 @media(max-width:500px) {
 .gameName {
+  margin-top:-120px;
   font-size: 60px;
   }
 .start {
+  margin-top: 90px;
   font-size: 45px;
+} 
+.start.players2 {
+  top: 80px;
+  font-size: 30px;
 }
 .choose{
   font-size: 50px;
@@ -391,7 +397,7 @@ td {
 }
 .modal__dialog {
   width: 280px;
-  margin: 50px auto;
+  margin: 10px auto;
   top: 130px;
 }
 .modal__title {
