@@ -17,7 +17,7 @@ function statBtn() {
       'font-size': '0px',
       'transition': '1.7s'
     });
-   // $('.mortalLough').html('<audio class="musicAudio"src="https://zvukipro.com/uploads/files/2018-12/1545842847_mji3nde5ntg0mji3nde0_c_2b1cpabqhho.mp3" autoplay></audio>');
+  //  $('.mortalLough').html('<audio class="musicAudio"src="https://zvukipro.com/uploads/files/2018-12/1545842847_mji3nde5ntg0mji3nde0_c_2b1cpabqhho.mp3" autoplay></audio>');
     event.preventDefault();
     setTimeout(() => {
       screens[0].classList.add('up');
@@ -55,9 +55,9 @@ function buttonSelectionShow() {
   });
 }
 
-//function MortalComabatFightAudio() {
- // $("td").html('<div><audio class="musicAudio"src="https://zvukipro.com/uploads/files/2018-12/1545842748_nta3mde5ntg0nta3mtew_n4ltgrxccn4.mp3" autoplay></audio></div>');
-//}
+/* function MortalComabatFightAudio() {
+  $("td").html('<div><audio class="musicAudio"src="https://zvukipro.com/uploads/files/2018-12/1545842748_nta3mde5ntg0nta3mtew_n4ltgrxccn4.mp3" autoplay></audio></div>');
+} */
 
 function buttonSelection() {
   $(".dots").click(function () {
