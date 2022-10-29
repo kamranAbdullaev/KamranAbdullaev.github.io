@@ -1,344 +1,536 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Khula', sans-serif;
-	height: 100vh;
-	overflow: hidden;
-	margin: 0;
-	text-align: center;
+  font-family: 'Khula', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+.screen.down100 {
+  margin-top: 100vh;
+}
+.choosePlayer{
+  position: relative;
+  margin-top: -200px;
+  font-size: 70px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  -webkit-animation: glowingChoose 1000ms infinite;
+  -moz-animation: glowingChoose 1000ms infinite;
+  -o-animation: glowingChoose 1000ms infinite;
+  animation: glowingChoose 1300ms infinite;
+}
+.chooseYouPlayer{
+    position: relative;
+      height: 100px;
+      width: 350px;
+      top: 100px;
+      text-align: center;
+      align-items: center;
+}
+
+.player1{
+  margin: 0 auto;
+  border-radius: 50%;
+    color: white;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    float: left;
+    font-size: 70px;
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 3px red;
+    animation: glowingDots 1100ms infinite;
+}
+.player2 {
+  border-radius: 50%;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    float: right;
+    font-size: 70px;
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 3px blue;
+    animation: glowingDots2 1300ms infinite;
+}
+
+.start.players2{
+  position: relative;
+  top: 120px;
+  font-size: 40px;
 }
 
 .screen {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   /* background: linear-gradient(90deg, #29323C 0%, #485563 100%); */
-	background-color: black;
+  background-color: black;
 }
 
 .screen.up {
-	margin-top: -100vh;
+  margin-top: -100vh;
 }
 
 .gameName {
-	position: absolute;
-	color: white;
-	text-shadow: 0 0 6px #fff,
+  position: absolute;
+  color: white;
+  text-shadow:
+    0 0 6px #fff,
     0 0 1px #fff,
     0 0 2px #fff;
-	font-size: 120px;
-	margin-top: -120px;
+  font-size: 120px;
+  margin-top: -120px;
 }
 
 .start {
-	position: absolute;
-	margin-top: 250px;
-	font-size: 60px;
-	font-weight: bold;
-	color: white;
-	text-decoration: none;
-	-webkit-animation: glowing 1300ms infinite;
-	-moz-animation: glowing 1300ms infinite;
-	-o-animation: glowing 1300ms infinite;
-	animation: glowing 1300ms infinite;
+  position: absolute;
+  margin-top: 250px;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  -webkit-animation: glowing 1300ms infinite;
+  -moz-animation: glowing 1300ms infinite;
+  -o-animation: glowing 1300ms infinite;
+  animation: glowing 1300ms infinite;
 }
 
 @-webkit-keyframes glowing {
-	0% {
-		color: #0091b2;
-		-webkit-text-shadow: 0 0 3px #0091b2;
-	}
+  0% {
+    color: #0091b2;
+    -webkit-text-shadow: 0 0 3px #0091b2;
+  }
 
-	50% {
-		color: #21c7ed;
-		-webkit-text-shadow: 0 0 15px #21c7ed;
-	}
+  50% {
+    color: #21c7ed;
+    -webkit-text-shadow: 0 0 15px #21c7ed;
+  }
 
-	100% {
-		color: #0091b2;
-		-webkit-text-shadow: 0 0 3px #0091b2;
-	}
+  100% {
+    color: #0091b2;
+    -webkit-text-shadow: 0 0 3px #0091b2;
+  }
 }
 
 @keyframes glowing {
-	0% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+  0% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 
-	50% {
-		color: #21c7ed;
-		text-shadow: 0 0 15px #21c7ed;
-	}
+  50% {
+    color: #21c7ed;
+    text-shadow: 0 0 15px #21c7ed;
+  }
 
-	100% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+  100% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 }
 
 .choose {
-	display: none;
-	position: relative;
-	margin-top: -200px;
-	font-size: 70px;
-	text-align: center;
-	color: white;
-	text-transform: uppercase;
-	-webkit-animation: glowingChoose 1000ms infinite;
-	-moz-animation: glowingChoose 1000ms infinite;
-	-o-animation: glowingChoose 1000ms infinite;
-	animation: glowingChoose 1300ms infinite;
+  display: none;
+  position: relative;
+  margin-top: -200px;
+  font-size: 70px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  -webkit-animation: glowingChoose 1000ms infinite;
+  -moz-animation: glowingChoose 1000ms infinite;
+  -o-animation: glowingChoose 1000ms infinite;
+  animation: glowingChoose 1300ms infinite;
 }
 
 @keyframes glowingChoose {
 
-	0% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+  0% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 
-	50% {
-		color: #21c7ed;
-		text-shadow: 0 0 15px #21c7ed;
-	}
+  50% {
 
-	100% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+    color: #21c7ed;
+    text-shadow: 0 0 15px #21c7ed;
+  }
+
+  100% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 }
 
 .dots {
-	border-radius: 50%;
-	display: none;
-	color: white;
-	background-color: red;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	vertical-align: center;
-	text-align: center;
-	height: 100px;
-	width: 100px;
-	float: left;
-	font-size: 70px;
-	cursor: pointer;
-	box-shadow: 0px 0px 50px 3px red;
-	animation: glowingDots 1100ms infinite;
+  border-radius: 50%;
+  display: none;
+  color: white;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  vertical-align: center;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  float: left;
+  font-size: 70px;
+  cursor: pointer;
+  box-shadow: 0px 0px 50px 3px red;
+  animation: glowingDots 1100ms infinite;
 }
 
 @keyframes glowingDots {
 
-	0% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+  0% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 
-	50% {
-		color: #21c7ed;
-		text-shadow: 0 0 15px #21c7ed;
-	}
+  50% {
 
-	100% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+    color: #21c7ed;
+    text-shadow: 0 0 15px #21c7ed;
+  }
+
+  100% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 }
 
 .dots2 {
-	border-radius: 50%;
-	display: none;
-	background-color: blue;
-	justify-content: center;
-	align-items: center;
-	margin: 0 auto;
-	position: relative;
-	vertical-align: center;
-	text-align: center;
-	height: 100px;
-	width: 100px;
-	float: right;
-	font-size: 70px;
-	cursor: pointer;
-	box-shadow: 0px 0px 50px 3px blue;
-	animation: glowingDots2 1300ms infinite;
+  border-radius: 50%;
+  display: none;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  vertical-align: center;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  float: right;
+  font-size: 70px;
+  cursor: pointer;
+  box-shadow: 0px 0px 50px 3px blue;
+  animation: glowingDots2 1300ms infinite;
 }
 
 @keyframes glowingDots2 {
 
-	0% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+  0% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 
-	50% {
-		color: #21c7ed;
-		text-shadow: 0 0 15px #21c7ed;
-	}
+  50% {
 
-	100% {
-		color: #0091b2;
-		text-shadow: 0 0 3px #0091b2;
-	}
+    color: #21c7ed;
+    text-shadow: 0 0 15px #21c7ed;
+  }
+
+  100% {
+    color: #0091b2;
+    text-shadow: 0 0 3px #0091b2;
+  }
 }
 
 .guys {
-	position: relative;
-	height: 100px;
-	width: 350px;
-	top: 100px;
+  position: relative;
+  height: 100px;
+  width: 350px;
+  top: 100px;
 }
 
 td {
-	border: 1px solid #00FFFF;
-	height: 120px;
-	width: 120px;
-	border-width: 4px;
-	font-size: 80px;
-	color: white;
+  border: 1px solid #00FFFF;
+  height: 120px;
+  width: 120px;
+  border-width: 4px;
+  font-size: 80px;
+  color: white;
 }
 
 table {
-	position: relative;
-	text-align: center;
-	margin: 0 auto;
-	display: none;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
 }
 
 .hide {
-	opacity: 0;
-	display: none;
+  opacity: 0;
+  display: none;
 }
 
 .show {
-	display: block;
+  display: block;
 }
 
 /** modal ******************************************************************************************/
 
 .modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .8)
 }
 
 .modal__dialog {
-	position: relative;
-	max-width: 400px;
-	margin: 50px auto;
-	display: block;
-	margin-top: 10%;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+  position: relative;
+  max-width: 400px;
+  margin: 50px auto;
+  display: block;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .modal__content {
-	position: relative;
-	width: 100%;
-	padding: 40px;
-	background-color: #fff;
-	border: 1px solid rgba(0, 0, 0, .2);
-	border-radius: 4px;
-	max-height: 80vh;
-	overflow-y: auto;
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  max-height: 80vh;
+  overflow-y: auto
 }
 
 .modal__close {
-	position: absolute;
-	top: 8px;
-	right: 14px;
-	font-size: 30px;
-	color: #000;
-	opacity: .5;
-	font-weight: 700;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 30px;
+  color: #000;
+  opacity: .5;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer
 }
 
 .modal__title {
-	text-align: center;
-	font-size: 22px;
-	text-transform: uppercase;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase
 }
 
 .btnRestart {
-	display: block;
-	width: 150px;
-	height: 45px;
-	margin: 0 auto;
-	margin-top: 90px;
-	font-size: 20px;
-	font-weight: 700;
-	text-transform: uppercase;
-	background-color: black;
-	color: white;
-	border-radius: 50px;
-	cursor: pointer;
+  display: block;
+  width: 150px;
+  height: 45px;
+  margin: 0 auto;
+  margin-top: 90px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 @media(max-width:500px) {
-	.gameName {
-		font-size: 60px;
-	}
-
-	.start {
-		font-size: 45px;
-	}
-
-	.choose {
-		font-size: 50px;
-	}
-
-	.dots {
-		position: relative;
-		display: flex;
-		height: 80px;
-		width: 80px;
-		font-size: 50px;
-		margin-left: 50px;
-	}
-
-	.dots2 {
-		position: relative;
-		display: flex;
-		height: 80px;
-		width: 80px;
-		font-size: 50px;
-		margin-right: 50px;
-	}
-
-	td {
-		height: 90px;
-		width: 90px;
-		border-width: 2px;
-		font-size: 50px;
-	}
-
-	.modal__dialog {
-		width: 280px;
-		margin: 50px auto;
-		top: 130px;
-	}
-
-	.modal__title {
-		font-size: 18px;
-	}
-
-	.btnRestart {
-		width: 130px;
-		height: 40px;
-		font-size: 18px;
-	}
+.gameName {
+  font-size: 60px;
+  }
+.start {
+  font-size: 45px;
 }
+.choose{
+  font-size: 50px;
+}
+.dots {
+  position: relative;
+  display:flex;
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  margin-left: 50px;
+}
+.dots2 {
+  position: relative;
+  display: flex;
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  margin-right: 50px;
+}
+td {
+  height: 90px;
+  width: 90px;
+  border-width: 2px;
+  font-size: 50px;
+}
+.modal__dialog {
+  width: 280px;
+  margin: 50px auto;
+  top: 130px;
+}
+.modal__title {
+  font-size: 18px;
+}
+.btnRestart {
+  width: 130px;
+  height: 40px;
+  font-size: 18px;
+}
+
+}
+
+/* ------------------------------------------------------------------- */
+/* ----------------------------------------------------------------
+-------------------------------------------------------------------
+
+-------------------------------------------------------------------
+---------------------------------------------------------------------
+
+------------------------------------------------------------------- */
+
+.tic-tac-toe {
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+  background-color: beige;
+  display: flex;
+  border: 1px solid cadetblue;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.open-game {
+  height: 300px;
+}
+
+.block {
+  width: 32.5%;
+  font-size: 50px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  height: 27.1%;
+  border: 1px solid black;
+  border-color: cadetblue;
+}
+
+.block:active {
+  background-color: cadetblue;
+  color: beige;
+}
+
+.button-start {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background-color: cadetblue;
+  color: aliceblue;
+}
+
+.hidden-button {
+  height: 0px;
+}
+
+.block-player {
+  width: 100%;
+  display: flex;
+  transition: all .2s;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.block-player div {
+  width: 35px;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 10px;
+  color: white;
+  height: 35px;
+}
+
+.close-block-player {
+  height: 0px;
+}
+
+.winner {
+  color: white;
+  background-color: forestgreen;
+  width: 252px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 17px;
+  transition: all .5s;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.hidden-winner {
+  height: 0px;
+  padding: 0px;
+}
+
+.player1{
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.player2 {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.home{
+  position: relative;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
