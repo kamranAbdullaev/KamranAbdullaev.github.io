@@ -1,5 +1,5 @@
 const startBtn = document.querySelector('#start'),
-  screens = document.querySelectorAll('.screen');
+  screens = document.querySelectorAll('.screen')
 
 let huPlayer = "X";
 let aiPlayer = "O";
