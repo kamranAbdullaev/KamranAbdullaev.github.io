@@ -293,49 +293,57 @@ table {
 }
 
 @media(max-width:500px) {
-.gameName {
-  font-size: 60px;
+  .gameName {
+    font-size: 60px;
   }
-.start {
-  font-size: 45px;
-}
-.choose{
-  font-size: 50px;
-}
-.dots {
-  position: relative;
-  display:flex;
-  height: 80px;
-  width: 80px;
-  font-size: 50px;
-  margin-left: 50px;
-}
-.dots2 {
-  position: relative;
-  display: flex;
-  height: 80px;
-  width: 80px;
-  font-size: 50px;
-  margin-right: 50px;
-}
-td {
-  height: 90px;
-  width: 90px;
-  border-width: 2px;
-  font-size: 50px;
-}
-.modal__dialog {
-  width: 280px;
-  margin: 50px auto;
-  top: 130px;
-}
-.modal__title {
-  font-size: 18px;
-}
-.btnRestart {
-  width: 130px;
-  height: 40px;
-  font-size: 18px;
-}
+
+  .start {
+    font-size: 45px;
+  }
+
+  .choose {
+    font-size: 50px;
+  }
+
+  .dots {
+    position: relative;
+    display: flex;
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    margin-left: 50px;
+  }
+
+  .dots2 {
+    position: relative;
+    display: flex;
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    margin-right: 50px;
+  }
+
+  td {
+    height: 90px;
+    width: 90px;
+    border-width: 2px;
+    font-size: 50px;
+  }
+
+  .modal__dialog {
+    width: 280px;
+    margin: 50px auto;
+    top: 130px;
+  }
+
+  .modal__title {
+    font-size: 18px;
+  }
+
+  .btnRestart {
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+  }
 
 }
