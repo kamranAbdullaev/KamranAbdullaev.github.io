@@ -1,9 +1,3 @@
-window.yaContextCb.push(()=>{
-  Ya.Context.AdvManager.render({
-    renderTo: 'yandex_rtb_R-A-2070830-1',
-    blockId: 'R-A-2070830-1'
-  })
-
 const startBtn = document.querySelector('#start'),
   screens = document.querySelectorAll('.screen');
 
