@@ -20,6 +20,11 @@ body {
   /* background: linear-gradient(90deg, #29323C 0%, #485563 100%); */
   background-color: black;
 }
+  #yandex_rtb_R-A-2070830-6{
+    position: relative;
+    align-items: left;
+    float: left;
+  }
 
 .screen.up {
   margin-top: -100vh;
