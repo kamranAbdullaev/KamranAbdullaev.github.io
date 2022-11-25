@@ -22,8 +22,7 @@ body {
 }
   #yandex_rtb_R-A-2070830-6{
     position: relative;
-    align-items: left;
-    float: left;
+    bottom: 0;
   }
 
 .screen.up {
