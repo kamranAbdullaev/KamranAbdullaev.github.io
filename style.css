@@ -304,6 +304,10 @@ table {
   .choose {
     font-size: 50px;
   }
+  
+  .reklam {
+    position: relative;
+  }
 
   .dots {
     position: relative;
@@ -345,5 +349,6 @@ table {
     height: 40px;
     font-size: 18px;
   }
+  
 
 }
