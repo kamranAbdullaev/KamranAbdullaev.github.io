@@ -1,96 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Yandex.RTB -->
-<script>window.yaContextCb=window.yaContextCb||[]</script>
-<script src="https://yandex.ru/ads/system/context.js" async></script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="screen">
-      <h1 class="gameName">Tic taс toe</h1>
-      <div class="mortalLough"></div>
-      <a href="#" class="start" id="start">Start Game</a>
-    <div class="reklam">
-        <!-- Yandex.RTB R-A-2070830-5 -->
-<script>window.yaContextCb.push(()=>{
-  Ya.Context.AdvManager.render({
-    type: 'fullscreen',    
-    platform: 'touch',
-    blockId: 'R-A-2070830-5'
-  })
-})</script>
-    <!-- Yandex.RTB R-A-2070830-6 -->
-<div id="yandex_rtb_R-A-2070830-6"></div>
-<script>window.yaContextCb.push(()=>{
-  Ya.Context.AdvManager.render({
-    renderTo: 'yandex_rtb_R-A-2070830-6',
-    blockId: 'R-A-2070830-6'
-  })
-})</script>
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Гонки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <header class="hud">
+        <div class="hud__title">Гонка по шоссе</div>
+        <div class="hud__stats">
+          <div>Счет: <span id="score">0</span></div>
+          <div>Скорость: <span id="speed">1</span></div>
+          <div>Рекорд: <span id="best">0</span></div>
         </div>
+        <div class="hud__controls">Стрелки ← → или A / D. Пробел — пауза. Enter — старт/рестарт.</div>
+      </header>
+
+      <div class="road" id="road">
+        <div class="lane lane--left"></div>
+        <div class="lane lane--right"></div>
+        <div class="car" id="car"></div>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay__card">
+          <div class="overlay__title" id="overlayTitle">Нажми Enter</div>
+          <div class="overlay__text" id="overlayText">Уклоняйся от машин и набирай очки.</div>
+        </div>
+      </div>
     </div>
 
-<div class="screen">
-<p class="choose">Select the button</p>
-<table>
-  <tr>
-    <td class = "cell" id = "0"></td>
-    <td class = "cell" id = "1"></td>
-    <td class = "cell" id = "2"></td>
-  </tr>
-  <tr>
-      <td class = "cell" id = "3"></td>
-      <td class = "cell" id = "4"></td>
-      <td class = "cell" id = "5"></td>
-    </tr>
-    <tr>
-      <td class = "cell" id = "6"></td>
-      <td class = "cell" id = "7"></td>
-      <td class = "cell" id = "8"></td>
-    </tr>
-<div class="guys">
-  <div class="dots">X</div>
-    <div class="dots2">O</div>
-</div>
-  </table>
-
-
-<div class="modal hide">
-  <div class="modal__dialog">
-      <div class="modal__content">
-          <form action="#">
-              <div data-close class="modal__close">&times;</div>
-              <div class="modal__title"></div>
-              <button class="btnRestart"> restart </button>
-          </form>
+    <div class="select" id="select">
+      <div class="select__card">
+        <div class="select__title">Выбор машины</div>
+        <div class="select__list" id="carList"></div>
+        <button class="select__start" id="startBtn" disabled>Начать</button>
       </div>
-  </div>
-  <!-- Yandex.RTB R-A-2070830-3 -->
-<script>window.yaContextCb.push(()=>{
-  Ya.Context.AdvManager.render({
-    type: 'fullscreen',    
-    platform: 'touch',
-    blockId: 'R-A-2070830-3'
-  })
-})</script>
-  <!-- Yandex.RTB R-A-2070830-1 -->
-<div id="yandex_rtb_R-A-2070830-1"></div>
-<script>window.yaContextCb.push(()=>{
-  Ya.Context.AdvManager.render({
-    renderTo: 'yandex_rtb_R-A-2070830-1',
-    blockId: 'R-A-2070830-1'
-  })
-})</script>
-</div>
+    </div>
 
-</div>   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
